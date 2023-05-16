@@ -11,7 +11,7 @@
     }
     
     function pushFilm() {
-        global $movies; // Assumendo che $movies sia un array definito altrove nel tuo codice
+        global $movies;
     
         $newFilm = new Movie($_GET['title'], $_GET['durata'], new Generi($_GET['generi']));
         array_push($movies, $newFilm);
@@ -70,7 +70,7 @@
       </div>
       <div class="form-floating">
         <input
-          type="text"
+          type="number"
           class="form-control"
           id="floatingPassword"
           name="durata"
